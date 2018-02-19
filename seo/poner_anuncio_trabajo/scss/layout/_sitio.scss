@@ -1,0 +1,538 @@
+@font-face {
+	font-family: 'pgp-ij';
+	src:url('../fonts/pgp-ij.eot?veet42');
+	src:url('../fonts/pgp-ij.eot?#iefixveet42') format('embedded-opentype'),
+		url('../fonts/pgp-ij.woff?veet42') format('woff'),
+		url('../fonts/pgp-ij.ttf?veet42') format('truetype'),
+		url('../fonts/pgp-ij.svg?veet42#pgp-ij') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="pgp-"],
+[class*=" pgp-"] {
+	font-family: 'pgp-ij';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pgp-facebook:before {content: "\e602";}
+.pgp-twitter:before {content: "\e601";}
+.pgp-google-plus:before {content: "\e603";}
+.pgp-linkedin:before {content: "\e600";}
+.pgp-star-full:before {content: "\e9d9";}
+*{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*------------------------------------*\
+	$SITIO
+\*------------------------------------*/
+
+
+@-webkit-viewport {
+	width : device-width;
+}
+
+@-moz-viewport {
+	width : device-width;
+}
+
+@-ms-viewport {
+	width : device-width;
+}
+
+@-o-viewport {
+	width : device-width;
+}
+
+@viewport {
+	width : device-width;
+}
+
+html {
+	font-size : 100%;
+	-webkit-overflow-scrolling : touch;
+	-webkit-tap-highlight-color : lighten($basecolor, 75%);
+	-webkit-text-size-adjust : 100%;
+	-ms-text-size-adjust : 100%;
+}
+
+body {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	background-color : transparent;
+	font-family : $basefont;
+	@include font-size();
+	//line-height : $baselineheight;
+	color : $textcolor;
+}
+
+
+
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video,
+input, textarea, select,
+*::before,
+*:before,
+*::after,
+*:after
+{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	outline: none;
+	
+	@include box-sizing();
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+.clearfix{
+	display: block;
+	clear: both;
+}
+
+body{
+	margin-top: 10px;
+	padding: 0 10px;
+	background: #c0c7cb;
+}
+
+$container: 970px;
+$containerPadding: 40px;
+
+.container{
+	width: 100%;
+	max-width: $container;
+	margin: auto;
+	margin-bottom: 10px;
+	background: #fff;
+
+	&.no-margin{
+		margin-bottom: 0
+	}
+	&.flex{
+		display: flex;
+	}
+	.container{
+		background: none;
+	}
+}
+.col{
+	display: inline-block;
+	vertical-align: top;
+	padding: 40px 20px;
+
+	&.col-l{padding-left: 10px}
+	&.col-r{padding-right: 10px}
+
+	$grid: 12;
+
+	@for $n from 1 through 12{
+		&.col-#{$n}{width: $n/$grid*100%;}
+	}
+
+	&.col-center{
+		text-align: center;
+		padding: 30px 20px;
+	}
+	&.no-padding-top{
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+	}
+	&.special01{
+		padding-top: 40px;
+		padding-bottom: 15px;
+		color: #666666;
+	}
+	&.special02{
+		padding-bottom: 32px;
+	}
+}
+.bg-gray{
+	background: #f2f2f2;
+
+	h3{
+		border-bottom: 1px solid #e6e6e6;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+a{
+	color: $dayblue;
+}
+
+h1{
+	display: none;
+}
+h2,h3{
+	font-family: $basefontbold;
+	font-weight: normal;
+}
+h2{
+	font-size: 30px;
+	margin-bottom: 8px;
+	
+	&.middle{
+		font-size: 25px;
+	}
+	& + h3{
+		font-size: 18px
+	}
+}
+h3{
+	font-size: 20px;
+	margin-bottom: 40px;
+
+	&.short-bottom{
+		margin-bottom: 14px;
+	}
+	&.middle-bottom{
+		margin-bottom: 26px;
+	}
+}
+
+ul{
+	li{
+		display: block;
+	}
+
+	&.bulled{
+		li{
+			margin-left: 20px;
+			position: relative;
+			margin-bottom: 4px;
+
+			&:before{
+				$size: 8px;
+				content: '';
+				width: $size;
+				height: $size;
+				position: absolute;
+				top: 4px;
+				left: -20px;
+				background: #666;
+				border-radius: $size / 2;
+			}
+		}
+	}
+	&.pluses {
+		margin: 8px 0px;
+	}
+}
+
+.button{
+	background: $dayblue;
+	border: 0px;
+	border-radius: 0;
+	font-size: 20px;
+	padding: 15px 40px;
+	margin-top: 16px;
+	color: #fff;
+	cursor: pointer;
+	line-height: 20px;
+
+	@include transition(0.3s);
+
+	&:hover{
+		background: $linkcolorhover;
+	}
+}
+
+nav.menu{
+	height: 50px;
+	background: $dayblue;
+	padding: 14px 20px;
+
+	img{
+		width: 90px;
+	}
+}
+.bg-image{
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+
+	&.bgi1{
+		padding-top: 270 / 970 * 100%;
+		background-image: url('../images/header.jpg');
+	}
+    &.bgi11{
+		padding-top: 270 / 970 * 100%;
+		background-image: url('../images/header-buscar-trabajadores-o-trabajo.jpg');
+	}
+    &.bgi111{
+		padding-top: 270 / 970 * 100%;
+		background-image: url('../images/header-poner-anuncio-empleo.jpg');
+	}
+	&.bgi2{
+		background-image: url('../images/blurred.jpg');
+		height: 350px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.valign,
+	p{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.valign{
+		height: 100%;
+	}
+	p{
+		max-width: 800px;
+		font-family: $basefontbold;
+		font-size: 36px;
+		color: #fff;
+		line-height: 0.96em;
+		padding-top: 18px;
+	}
+}
+
+$topAnim: 40px;
+.review-cont{
+	$padding: 90px;
+
+	position: relative;
+	background: #fff;
+	min-height: 150px;
+	opacity: 0;
+	top: $topAnim;
+	transition: all 1s ease;
+	z-index: 2;
+
+	&.show{
+		opacity: 1;
+		top: 0;
+
+		+ .review-bg{
+			margin-top: 0px;
+			opacity: 1;
+		}
+	}
+	@for $n from 1 through 2{
+		&.review#{$n}{
+			&,
+			+ .review-bg{
+				transition-delay: 0.4s * ($n - 1);
+			}
+		}
+	}
+
+	.face{
+		width: $padding;
+		padding: 20px;
+		padding-right: 0;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+
+		img{
+			$size: 60px;
+			height: $size;
+			width: $size;
+			border-radius: $size / 2;
+			border: 2px solid #f2f2f2;
+			overflow: hidden;
+		}
+	}
+	.review{
+		padding: 20px;
+		padding-left: $padding;
+
+		.name{
+			color: #333333;
+			font-size: 18px;
+			font-family: $basefontbold;
+		}
+		.date{
+			font-size: 16px;
+			color: #666666;
+			line-height: 24px;
+		}
+		.content{
+			color: #333333;
+			font-style: italic;
+			font-size: 16px;
+			padding-top: 5px;
+			line-height: 20px;
+		}
+	}
+}
+.review-bg{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	background: #fff;
+	left: 20px;
+	right: 10px;
+	margin-top: $topAnim;
+	transition: all 1s ease;
+	opacity: 0;
+
+	.col-l &{
+		left: 10px;
+		right: 20px;
+	}
+}
+
+.logo{
+	margin: 0px 6px;
+}
+
+.ss{
+	display: block;
+	margin: 20px auto;
+}
+
+@media (max-width: 640px){
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	nav.menu{
+		text-align: center;
+	}
+	ul.bulled br{
+		display: none;
+	}
+	.col{
+		width: 100% !important;
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+		display: block;
+        
+        &.col-top-cut{
+			border-top: 10px solid #c0c7cb;
+		}
+	}
+	.container.padding-flow .col + .col{
+		padding-top: 0;
+	}
+	.container.flex{
+		display: block;
+	}
+	.button{
+		width: 100%;
+		max-width: 300px;
+		max-width: 100%;
+		text-align: center;
+		margin: auto;
+		padding-right: 10px;
+		padding-left: 10px;
+		display: table;
+		font-size: 18px;
+		margin-top: 14px;
+	}
+	.bg-image.bgi2{
+		height: 250px;
+	}
+	.bg-image p{
+		font-size: 26px;
+		padding: 0;
+	}
+	.review-cont{
+		&.first{
+			margin-bottom: 10px;
+		}
+	}
+	.review-bg{
+		display: none;
+	}
+}
+@media (max-width: 440px){
+	.col{
+		padding: 20px 10px !important;
+
+		&.col-center{
+			padding: 20px 10px !important;
+		}
+		&.no-padding-top{
+			padding: 0px 10px !important;
+		}
+        &.col-top-cut{
+			border-top: 10px solid #c0c7cb;
+		}
+	}
+	h2{
+		font-size: 25px;
+		margin-bottom: 12px;
+
+		&.middle {
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+	}
+	h3{
+
+	}
+
+	.bg-image.bgi2{
+		height: 114px;
+	}
+	.bg-image p{
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.review-cont{
+		&.first{
+			margin-bottom: 10px;
+		}
+		.face{
+			padding: 10px;
+			width: 60px;
+		}
+		.review{
+			padding: 10px;
+			padding-left: 80px;
+		}
+	}
+
+	.apple{
+		display: none;
+	}
+	.appleDevice{
+		.apple{
+			display: inline-block;
+		}
+		.android{
+			display: none;
+		}
+	}
+	.logo{
+		margin-bottom: 15px;
+	}
+}
+
+
+

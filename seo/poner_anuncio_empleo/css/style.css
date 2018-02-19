@@ -1,0 +1,797 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se can
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+/*------------------------------------*\
+    $CONTENIDO
+\*------------------------------------*/
+/**
+ * Contenido..................... Esto que lees
+
+ * Variables..................... Configuramos todas las variables del framework
+
+ * Mixins........................ Mixins de LESS
+
+ * Helpers....................... Clases de ayuda
+
+ * Reset......................... Reinicio de valores CSS
+
+ * Fuentes....................... Fuentes que vamos a importar
+
+ * Links......................... Formas y estilos de los links
+
+ * Tablas........................ Estilos de las tablas
+
+ * Botones....................... Estilos de Botones, skins y variantes
+
+ * Elementos..................... Elementos varios como Imagen, HR, etc...
+
+ * Tipografía.................... Encabezados, small, párrafos, listas, etc...
+
+ * Navegación.................... Una navegación, por si quieres usar esta y no la tuya propia
+
+ * Formularios................... Estilos de todos los elementos de formularios y sus variantes
+
+ * Sitio......................... Aquí escribes tus estilos para la web se vea como tu quieres ;)
+
+ * Paginación.................... Estilos básicos para las paginaciones
+
+ * Texturas...................... Badges, cajas y wells
+
+ * Breakpoints................... Importamos breakpoints basados en las variables @bp$
+
+ * Patron........................ Estilos para la guía de patrones
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ *
+ * Definimos y configuramos las variables CSS que vamos a utilizar
+ *
+ */
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ */
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Quieres todos los elementos tener un box-sizing:border-box?
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/*------------------------------------*\
+    $PATHS
+\*------------------------------------*/
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Definimos elementos constantes del layout
+ */
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * Escala de grises
+ * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
+ */
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, nav, section {
+  display: block; }
+
+/**
+* Ningún padding jodiendo la marrana.
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*------------------------------------*\
+    $FUENTES
+\*------------------------------------*/
+@font-face {
+  font-family: 'Proximanova';
+  src: url("../fonts/proximanova-regular.eot?") format("eot"), url("../fonts/proximanova-regular.woff") format("woff"), url("../fonts/proximanova-regular.otf") format("opentype"), url("../fonts/proximanova-regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Proximanovalight';
+  src: url("../fonts/proximanova-light.eot?") format("eot"), url("../fonts/proximanova-light.woff") format("woff"), url("../fonts/proximanova-light.otf") format("opentype"), url("../fonts/proximanova-light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Proximanovabold';
+  src: url("../fonts/proximanova-bold.eot?") format("eot"), url("../fonts/proximanova-bold.woff") format("woff"), url("../fonts/proximanova-bold.otf") format("opentype"), url("../fonts/proximanova-bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Proximanovasemibold';
+  src: url("../fonts/proximanova-semibold.eot?") format("eot"), url("../fonts/proximanova-semibold.woff") format("woff"), url("../fonts/proximanova-semibold.otf") format("opentype"), url("../fonts/proximanova-semibold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Icons';
+  src: url("../fonts/icomoon.eot?") format("eot"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'InfoJobs';
+  src: url("../fonts/InfoJobs.eot?");
+  src: url("../fonts/InfoJobs.eot?#iefix") format("embedded-opentype"), url("../fonts/InfoJobs.woff?") format("woff"), url("../fonts/InfoJobs.ttf?") format("truetype"), url("../fonts/InfoJobs.svg?#InfoJobs") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Proximanovasemibold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+  h1.altheader,
+  h2.altheader,
+  h3.altheader,
+  h4.altheader,
+  h5.altheader,
+  h6.altheader {
+    color: gray;
+    text-transform: uppercase; }
+
+h1 small,
+h2 small,
+h3 small {
+  font-weight: normal;
+  display: block;
+  color: gray; }
+
+.xxxlarge {
+  font-family: 'Proximanovasemibold';
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 39px;
+  line-height: 2.4375rem;
+  margin-bottom: 10px; }
+
+.xxlarge {
+  font-family: 'Proximanovasemibold';
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 33px;
+  line-height: 2.0625rem;
+  margin-bottom: 10px; }
+
+.xlarge {
+  font-family: 'Proximanovasemibold';
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+  margin-bottom: 10px; }
+
+.large {
+  font-family: 'Proximanovasemibold';
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 23px;
+  line-height: 1.4375rem;
+  margin-bottom: 10px; }
+
+.medium {
+  font-family: 'Proximanovasemibold';
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 21px;
+  line-height: 1.3125rem;
+  margin-bottom: 10px; }
+
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem; }
+
+.intro {
+  font-weight: bold; }
+
+small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: gray; }
+
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 20px; }
+
+li ul,
+li ol {
+  margin: 0; }
+
+blockquote {
+  margin: 0 0 1.5em 0;
+  padding-left: 20px;
+  border-left: 2px solid #dedede;
+  font-family: Georgia, Times, "Times New Roman";
+  font-style: normal; }
+  blockquote p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: gray;
+    font-style: italic; }
+
+q {
+  quotes: none;
+  font-style: italic; }
+
+blockquote p::before,
+blockquote p::after,
+q:before,
+q:after {
+  content: ""; }
+
+cite {
+  font-style: normal; }
+
+dl,
+dd {
+  margin-bottom: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+.dl-horizontal dt {
+  float: left;
+  clear: left;
+  width: 20.25%;
+  text-align: right; }
+.dl-horizontal dd {
+  margin-left: 22.78%; }
+
+abbr[title] {
+  border-bottom: 1px dotted #dedede;
+  cursor: help; }
+
+b, strong {
+  font-family: 'Proximanovasemibold'; }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: white;
+  color: #262626;
+  text-decoration: none; }
+
+mark {
+  background-color: yellow;
+  color: #262626; }
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 0;
+  vertical-align: 1.5em; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+@font-face {
+  font-family: 'pgp-ij';
+  src: url("../fonts/pgp-ij.eot?veet42");
+  src: url("../fonts/pgp-ij.eot?#iefixveet42") format("embedded-opentype"), url("../fonts/pgp-ij.woff?veet42") format("woff"), url("../fonts/pgp-ij.ttf?veet42") format("truetype"), url("../fonts/pgp-ij.svg?veet42#pgp-ij") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="pgp-"],
+[class*=" pgp-"] {
+  font-family: 'pgp-ij';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.pgp-facebook:before {
+  content: "\e602"; }
+
+.pgp-twitter:before {
+  content: "\e601"; }
+
+.pgp-google-plus:before {
+  content: "\e603"; }
+
+.pgp-linkedin:before {
+  content: "\e600"; }
+
+.pgp-star-full:before {
+  content: "\e9d9"; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*------------------------------------*\
+	$SITIO
+\*------------------------------------*/
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+html {
+  font-size: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Proximanova", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #262626; }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video,
+input, textarea, select,
+*::before,
+*:before,
+*::after,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+.clearfix {
+  display: block;
+  clear: both; }
+
+body {
+  margin-top: 10px;
+  padding: 0 10px;
+  background: #c0c7cb; }
+
+.container {
+  width: 100%;
+  max-width: 970px;
+  margin: auto;
+  margin-bottom: 10px;
+  background: #fff; }
+  .container.no-margin {
+    margin-bottom: 0; }
+  .container.flex {
+    display: flex; }
+  .container .container {
+    background: none; }
+
+.col {
+  display: inline-block;
+  vertical-align: top;
+  padding: 40px 20px; }
+  .col.col-l {
+    padding-left: 10px; }
+  .col.col-r {
+    padding-right: 10px; }
+  .col.col-1 {
+    width: 8.3333333333%; }
+  .col.col-2 {
+    width: 16.6666666667%; }
+  .col.col-3 {
+    width: 25%; }
+  .col.col-4 {
+    width: 33.3333333333%; }
+  .col.col-5 {
+    width: 41.6666666667%; }
+  .col.col-6 {
+    width: 50%; }
+  .col.col-7 {
+    width: 58.3333333333%; }
+  .col.col-8 {
+    width: 66.6666666667%; }
+  .col.col-9 {
+    width: 75%; }
+  .col.col-10 {
+    width: 83.3333333333%; }
+  .col.col-11 {
+    width: 91.6666666667%; }
+  .col.col-12 {
+    width: 100%; }
+  .col.col-center {
+    text-align: center;
+    padding: 30px 20px; }
+  .col.no-padding-top {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative; }
+  .col.special01 {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    color: #666666; }
+  .col.special02 {
+    padding-bottom: 32px; }
+
+.bg-gray {
+  background: #f2f2f2; }
+  .bg-gray h3 {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    padding-bottom: 20px; }
+
+a {
+  color: #2088c2; }
+
+h1 {
+  display: none; }
+
+h2, h3 {
+  font-family: "Proximanovasemibold", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 8px; }
+  h2.middle {
+    font-size: 25px; }
+  h2 + h3 {
+    font-size: 18px; }
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 40px; }
+  h3.short-bottom {
+    margin-bottom: 14px; }
+  h3.middle-bottom {
+    margin-bottom: 26px; }
+
+ul li {
+  display: block; }
+ul.bulled li {
+  margin-left: 20px;
+  position: relative;
+  margin-bottom: 4px; }
+  ul.bulled li:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    background: #666;
+    border-radius: 4px; }
+ul.pluses {
+  margin: 8px 0px; }
+
+.button {
+  background: #2088c2;
+  border: 0px;
+  border-radius: 0;
+  font-size: 20px;
+  padding: 15px 40px;
+  margin-top: 16px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 20px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .button:hover {
+    background: #196996; }
+
+nav.menu {
+  height: 50px;
+  background: #2088c2;
+  padding: 14px 20px; }
+  nav.menu img {
+    width: 90px; }
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+  .bg-image.bgi1 {
+    padding-top: 27.8350515464%;
+    background-image: url("../images/header.jpg"); }
+  .bg-image.bgi11 {
+    padding-top: 27.8350515464%;
+    background-image: url("../images/header-buscar-trabajadores-o-trabajo.jpg"); }
+  .bg-image.bgi111 {
+    padding-top: 27.8350515464%;
+    background-image: url("../images/header-poner-anuncio-empleo.jpg"); }
+  .bg-image.bgi2 {
+    background-image: url("../images/blurred.jpg");
+    height: 350px;
+    padding-right: 20px;
+    padding-left: 20px; }
+  .bg-image .valign,
+  .bg-image p {
+    display: inline-block;
+    vertical-align: middle; }
+  .bg-image .valign {
+    height: 100%; }
+  .bg-image p {
+    max-width: 800px;
+    font-family: "Proximanovasemibold", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    color: #fff;
+    line-height: 0.96em;
+    padding-top: 18px; }
+
+.review-cont {
+  position: relative;
+  background: #fff;
+  min-height: 150px;
+  opacity: 0;
+  top: 40px;
+  transition: all 1s ease;
+  z-index: 2; }
+  .review-cont.show {
+    opacity: 1;
+    top: 0; }
+    .review-cont.show + .review-bg {
+      margin-top: 0px;
+      opacity: 1; }
+  .review-cont.review1,
+  .review-cont.review1 + .review-bg {
+    transition-delay: 0s; }
+  .review-cont.review2,
+  .review-cont.review2 + .review-bg {
+    transition-delay: 0.4s; }
+  .review-cont .face {
+    width: 90px;
+    padding: 20px;
+    padding-right: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+    .review-cont .face img {
+      height: 60px;
+      width: 60px;
+      border-radius: 30px;
+      border: 2px solid #f2f2f2;
+      overflow: hidden; }
+  .review-cont .review {
+    padding: 20px;
+    padding-left: 90px; }
+    .review-cont .review .name {
+      color: #333333;
+      font-size: 18px;
+      font-family: "Proximanovasemibold", Helvetica, Arial, sans-serif; }
+    .review-cont .review .date {
+      font-size: 16px;
+      color: #666666;
+      line-height: 24px; }
+    .review-cont .review .content {
+      color: #333333;
+      font-style: italic;
+      font-size: 16px;
+      padding-top: 5px;
+      line-height: 20px; }
+
+.review-bg {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  background: #fff;
+  left: 20px;
+  right: 10px;
+  margin-top: 40px;
+  transition: all 1s ease;
+  opacity: 0; }
+  .col-l .review-bg {
+    left: 10px;
+    right: 20px; }
+
+.logo {
+  margin: 0px 6px; }
+
+.ss {
+  display: block;
+  margin: 20px auto; }
+
+@media (max-width: 640px) {
+  body {
+    margin: 0;
+    padding: 0; }
+
+  nav.menu {
+    text-align: center; }
+
+  ul.bulled br {
+    display: none; }
+
+  .col {
+    width: 100% !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    display: block; }
+    .col.col-top-cut {
+      border-top: 10px solid #c0c7cb; }
+
+  .container.padding-flow .col + .col {
+    padding-top: 0; }
+
+  .container.flex {
+    display: block; }
+
+  .button {
+    width: 100%;
+    max-width: 300px;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: table;
+    font-size: 18px;
+    margin-top: 14px; }
+
+  .bg-image.bgi2 {
+    height: 250px; }
+
+  .bg-image p {
+    font-size: 26px;
+    padding: 0; }
+
+  .review-cont.first {
+    margin-bottom: 10px; }
+
+  .review-bg {
+    display: none; } }
+@media (max-width: 440px) {
+  .col {
+    padding: 20px 10px !important; }
+    .col.col-center {
+      padding: 20px 10px !important; }
+    .col.no-padding-top {
+      padding: 0px 10px !important; }
+    .col.col-top-cut {
+      border-top: 10px solid #c0c7cb; }
+
+  h2 {
+    font-size: 25px;
+    margin-bottom: 12px; }
+    h2.middle {
+      font-size: 20px;
+      margin-bottom: 0; }
+
+  .bg-image.bgi2 {
+    height: 114px; }
+
+  .bg-image p {
+    font-size: 20px;
+    line-height: 24px; }
+
+  .review-cont.first {
+    margin-bottom: 10px; }
+  .review-cont .face {
+    padding: 10px;
+    width: 60px; }
+  .review-cont .review {
+    padding: 10px;
+    padding-left: 80px; }
+
+  .apple {
+    display: none; }
+
+  .appleDevice .apple {
+    display: inline-block; }
+  .appleDevice .android {
+    display: none; }
+
+  .logo {
+    margin-bottom: 15px; } }
