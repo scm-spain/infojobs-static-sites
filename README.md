@@ -1,4 +1,4 @@
-# Infojos static sites
+# InfoJobs static sites
 
 ## SEO
 
